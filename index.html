@@ -176,7 +176,7 @@
         <h2 class="title is-3">Overview</h2>
         <div class="content has-text-justified">
           <p style="text-align:center;">
-            <img src="./static/images/modeldiagram.png" class="img-reponsive" />
+            <img src="./static/images/Auto-RT.png" class="img-reponsive" />
           </p>
           AutoRT is an exploration into scaling up robots to unstructured "in the wild" settings. We use VLMs to do open-vocab description of what the robot sees, then pass that description to an LLM which proposes natural language instructions. The proposals are then critiqued by another LLM using
           what we call a <i>robot constitution</i>, to refine instructions towards safer completable behavior.
@@ -201,13 +201,16 @@
             <li>A valid task is sampled from the filtered list, and the robot attempts it.</li>
           </ol>
           <p>
-            We assume AutoRT is run on a <i>fleet</i> of many robots supervised by a smaller number of humans. The system supports defining the desired fraction of human demonstration, which we used to adjust data collection based on how autonomous we want the robots to be.
+            We assume AutoRT is run on a <i>fleet</i> of many robots supervised by a smaller number of humans. The system supports defining the desired fraction of human demonstration, which we used to adjust data collection based on how autonomous we want the robots to be. Up to 20 robots were used at once, collecting over 77,000 episodes covering 6,300 unique language instructions.
           </p>
           <p style="text-align:center;">
             <img src="./static/images/fleetfraction.png" class="img-reponsive" />
           </p>
           <p style="text-align:center;">
             <img src="./static/images/robot_stats.svg" class="img-reponsive" />
+          </p>
+          <p style="text-align:center;">
+            <img src="./static/images/autort_episodes.png" class="img-reponsive" />
           </p>
         </div>
       </div>
