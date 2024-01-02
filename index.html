@@ -201,17 +201,22 @@
             <li>A valid task is sampled from the filtered list, and the robot attempts it.</li>
           </ol>
           <p>
-            We assume AutoRT is run on a <i>fleet</i> of many robots supervised by a smaller number of humans. The system supports defining the desired fraction of human demonstration, which we used to adjust data collection based on how autonomous we want the robots to be. Up to 20 robots were used at once, collecting over 77,000 episodes covering 6,300 unique language instructions.
+            We assume AutoRT is run on a <i>fleet</i> of many robots supervised by a smaller number of humans. The system supports defining the desired fraction of human demonstration, which we used to adjust data collection based on how autonomous we want the robots to be. Up to 20 robots were used at once, collecting over 77,000 episodes covering 3,700 unique language instructions.
           </p>
-          <p style="text-align:center;">
-            <img src="./static/images/fleetfraction.png" class="img-reponsive" />
-          </p>
-          <p style="text-align:center;">
-            <img src="./static/images/robot_stats.svg" class="img-reponsive" />
-          </p>
-          <p style="text-align:center;">
-            <img src="./static/images/autort_episodes.png" class="img-reponsive" />
-          </p>
+          <div class="columns is-centered">
+            <div class="column is-5">
+              <img src="./static/images/fleetfraction.png" class="img-reponsive" />
+              <img src="./static/images/total_robots.png" class="img-reponsive" />
+            </div>
+          </div>
+          <div class="columns is-centered">
+            <div class="column is-5">
+              <img src="./static/images/autort_episodes.png" class="img-reponsive" />
+            </div>
+            <div class="column is-5">
+              <img src="./static/images/unique_tasks.png" class="img-reponsive" />
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -263,6 +268,7 @@ This robot shall not interact with objects that are sharp, such as a knife</pre>
             <pre style="white-space: pre-wrap;">This robot only has one arm, and thus cannot perform tasks requiring two arms. For example, it cannot open a bottle.</pre>
           </ol>
           <p>
+            See the paper for the full prompts.
             Including this robot constitution when generating and critiquing tasks is critical to making the system usable. We found that with the constitution, 88% of initially generated tasks are valid, increasing to 93% valid tasks after one round of task filtering. In testing with adversarial scenes designed to encourage bad tasks (i.e. scenes with multiple sharp objects), the constitutional robot generates valid tasks 83% of the time, compared to just 18% of the time without it.
           </p>
           <p>
@@ -277,7 +283,7 @@ This robot shall not interact with objects that are sharp, such as a knife</pre>
         <h2 class="title is-3">Videos</h2>
         <div class="content has-text-justified">
           <p>
-            TODO: Write this.
+            We provide additional videos of robot behavior below.
           </p>
         </div>
       </div>
@@ -287,6 +293,7 @@ This robot shall not interact with objects that are sharp, such as a knife</pre>
         <h3 class="title is-4">Policy Examples</h3>
         <div class="content has-text-justified">
           <p>
+            To sanity check the data, 
             Sample videos from RT-1 finetuning.
           </p>
           <div class="columns is-centered">
